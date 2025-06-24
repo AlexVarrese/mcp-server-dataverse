@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Ou mais recente (ESNext)
+    "module": "NodeNext", // Essencial para módulos ES no Node
+    "moduleResolution": "NodeNext", // Essencial para módulos ES no Node
+    "outDir": "./dist", // Pasta onde o JavaScript compilado será salvo
+    "rootDir": "./src", // Pasta onde seu código TypeScript estará
+    "strict": true, // Habilita checagens rigorosas de tipo (recomendado)
+    "esModuleInterop": true, // Melhora a interoperabilidade com módulos CommonJS
+    "skipLibCheck": true, // Pula a checagem de tipos em arquivos de declaração (.d.ts)
+    "forceConsistentCasingInFileNames": true // Garante consistência nos nomes de arquivos
+  },
+  "include": ["src/**/*"], // Inclui todos os arquivos dentro da pasta 'src'
+  "exclude": ["node_modules", "**/*.spec.ts"] // Exclui dependências e testes
+}

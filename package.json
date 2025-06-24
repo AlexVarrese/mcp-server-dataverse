@@ -1,0 +1,36 @@
+{
+  "name": "dynamics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "cross-env DYNAMICS_URL=https://almdevopsdev.crm.dynamics.com DYNAMICS_CLIENT_ID=47175a6e-90f4-418f-9ca1-3108f1c24d55 DYNAMICS_CLIENT_SECRET=Jp08Q~EEIHomij4ITv5q.q6VrjrIoBJTeZvuRadM DYNAMICS_TENANT_ID=8cdce8c1-de4d-4251-bc08-365727cf7e03 node dist/run-sse.js",
+    "start:stdio": "node dist/run-stdio.js",
+    "dev:stdio": "npm run build && npm run start:stdio",
+    "start:sse": "cross-env DYNAMICS_URL=https://almdevopsdev.crm.dynamics.com DYNAMICS_CLIENT_ID=47175a6e-90f4-418f-9ca1-3108f1c24d55 DYNAMICS_CLIENT_SECRET=Jp08Q~EEIHomij4ITv5q.q6VrjrIoBJTeZvuRadM DYNAMICS_TENANT_ID=8cdce8c1-de4d-4251-bc08-365727cf7e03 node dist/run-sse.js",
+    "dev:sse": "npm run build && npm run start:sse",
+    "cli": "cross-env DYNAMICS_URL=https://almdevopsdev.crm.dynamics.com DYNAMICS_CLIENT_ID=47175a6e-90f4-418f-9ca1-3108f1c24d55 DYNAMICS_CLIENT_SECRET=Jp08Q~EEIHomij4ITv5q.q6VrjrIoBJTeZvuRadM DYNAMICS_TENANT_ID=8cdce8c1-de4d-4251-bc08-365727cf7e03 node dist/run-cli.js",
+    "dev:cli": "npm run build && npm run cli",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^3.5.0",
+    "@modelcontextprotocol/inspector": "^0.8.2",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "zod": "^3.24.2"
+  }
+}
